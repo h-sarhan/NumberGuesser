@@ -10,6 +10,7 @@ let again = 0;
 
 // Play a round
 button.addEventListener("click", e => {
+	e.preventDefault();
 	// Check if player is playing again
 	if (again == 1) {
 		guess.setAttribute("Placeholder", "Enter your guess...");
@@ -50,8 +51,6 @@ button.addEventListener("click", e => {
 				youLose();
 			}
 		}
-
-		e.preventDefault();
 	}
 });
 
